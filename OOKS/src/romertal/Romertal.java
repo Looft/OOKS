@@ -10,13 +10,24 @@ public class Romertal {
 	}
 
 	private String cleanUp(String a, String b) {
-		String s = format(a+b);
+		String s = a+b;
+		
 		s = DTilM(s);
 		s = CTilD(s);
 		s = LTilC(s);
 		s = XTilL(s);
 		s = VTilX(s);
 		s = ITilV(s);
+		
+		s = ITilV(s);
+		s = VTilX(s);
+		s = XTilL(s);
+		s = LTilC(s);
+		s = CTilD(s);
+		s = DTilM(s);
+		
+		s = format(s);
+		
 		return s;
 	}
 	
