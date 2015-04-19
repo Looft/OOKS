@@ -10,17 +10,69 @@ public class Romertal {
 	}
 
 	private String cleanUp(String a, String b) {
-		String s = a+b;
-		String I = ITilV(s);
-		String V = VTilX(s);
-		String X = XTilL(s);
-		String L = LTilC(s);
-		String C = CTilD(s);
-		String D = DTilM(s);
-		String M = "";
-		
-		s = M+D+C+L+X+V+I;
+		String s = format(a+b);
+		s = DTilM(s);
+		s = CTilD(s);
+		s = LTilC(s);
+		s = XTilL(s);
+		s = VTilX(s);
+		s = ITilV(s);
 		return s;
+	}
+	
+	public String format(String s){
+		int antalI = 0, antalV = 0, antalX = 0, antalL = 0, antalC = 0, antalD = 0, antalM = 0;
+		for(int i = 0; i < s.length(); i++){
+			switch(s.charAt(i)){
+			case 'I':
+				antalI++;
+				break;
+			case 'V':
+				antalV++;
+				break;
+			case 'X':
+				antalX++;
+				break;
+			case 'L':
+				antalL++;
+				break;
+			case 'C':
+				antalC++;
+				break;
+			case 'D':
+				antalD++;
+				break;
+			case 'M':
+				antalM++;
+				break;
+			default:
+				System.out.println("Fejl i switch");
+				break;
+			}
+		}
+		StringBuffer r = new StringBuffer();
+		for(int i = 0; i<antalM; i++){
+			r.append('M');
+		}
+		for(int i = 0; i<antalD; i++){
+			r.append('D');
+		}
+		for(int i = 0; i<antalC; i++){
+			r.append('C');
+		}
+		for(int i = 0; i<antalL; i++){
+			r.append('L');
+		}
+		for(int i = 0; i<antalX; i++){
+			r.append('X');
+		}
+		for(int i = 0; i<antalV; i++){
+			r.append('V');
+		}
+		for(int i = 0; i<antalI; i++){
+			r.append('I');
+		}
+		return r.toString();
 	}
 
 	public String ITilV(String s) {
@@ -33,7 +85,8 @@ public class Romertal {
 		}
 		antalV += antalI/5;
 		antalI = antalI%5;
-		StringBuffer r = new StringBuffer();
+		s = s.replace("I","");
+		StringBuffer r = new StringBuffer(s);
 		for(int i = 0; i< antalV; i++){
 			r.append("V");
 		}
@@ -53,7 +106,8 @@ public class Romertal {
 		}
 		antalX += antalV/2;
 		antalV = antalV%2;
-		StringBuffer r = new StringBuffer();
+		s = s.replace("V","");
+		StringBuffer r = new StringBuffer(s);
 		for(int i = 0; i< antalX; i++){
 			r.append("X");
 		}
@@ -73,7 +127,8 @@ public class Romertal {
 		}
 		antalL += antalX/5;
 		antalX = antalX%5;
-		StringBuffer r = new StringBuffer();
+		s = s.replace("X","");
+		StringBuffer r = new StringBuffer(s);
 		for(int i = 0; i< antalL; i++){
 			r.append("L");
 		}
@@ -93,7 +148,8 @@ public class Romertal {
 		}
 		antalC += antalL/2;
 		antalL = antalL%2;
-		StringBuffer r = new StringBuffer();
+		s = s.replace("L","");
+		StringBuffer r = new StringBuffer(s);
 		for(int i = 0; i< antalC; i++){
 			r.append("C");
 		}
@@ -113,7 +169,8 @@ public class Romertal {
 		}
 		antalD += antalC/5;
 		antalC = antalC%5;
-		StringBuffer r = new StringBuffer();
+		s = s.replace("C","");
+		StringBuffer r = new StringBuffer(s);
 		for(int i = 0; i< antalD; i++){
 			r.append("D");
 		}
@@ -133,7 +190,8 @@ public class Romertal {
 		}
 		antalM += antalD/2;
 		antalD = antalD%2;
-		StringBuffer r = new StringBuffer();
+		s = s.replace("D","");
+		StringBuffer r = new StringBuffer(s);
 		for(int i = 0; i< antalM; i++){
 			r.append("M");
 		}

@@ -12,10 +12,10 @@ public class MTest {
 	public void testDTilM() {
 		Romertal r = new Romertal();
 		String a = "D";
-		String b = "D";
+		String b = "DD";
 		String s = a+b;
 		
-		assertEquals("M", r.DTilM(s));
+		assertEquals("MD", r.DTilM(s));
 	}
 	
 	@Test
@@ -32,7 +32,7 @@ public class MTest {
 	public void test() {
 		Romertal r = new Romertal();
 		
-		assertEquals("M", r.calculate("D", "D"));
+		assertEquals("MD", r.calculate("DD", "D"));
 	}
 
 }
