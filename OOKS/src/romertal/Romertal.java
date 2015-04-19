@@ -4,12 +4,35 @@ public class Romertal {
 
 
 	public String calculate(String a, String b) {
-		String s = new String();
-		s = cleanUp(a,b);
-		return s;
+		String s = a+b;
+		if(checkIfValid(s)){
+			s = cleanUp(a,b);
+			return s;
+		}else{
+			return "Fejl";
+		}
+		
+	}
+	
+	public boolean checkIfValid(String s){
+		boolean b = true;
+		if(s.length() == 0){
+			b = false;
+		}else{
+			for(int i = 0; i<s.length(); i++){
+				char a = s.charAt(i);
+				if(a == 'I' || a == 'V' || a == 'X' || a == 'L' || a == 'C' || a == 'D' || a == 'M'){
+					b = true;
+				}else{
+					b = false;
+					break;
+				}
+			}
+		}
+		return b;
 	}
 
-	private String cleanUp(String a, String b) {
+	public String cleanUp(String a, String b) {
 		String s = a+b;
 		
 		s = DTilM(s);
