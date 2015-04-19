@@ -35,5 +35,5 @@ b = D
 a = 'tom'             'fejl'
 b = III
 
-a = IV                 'fejl'
-b = VX
+a = A                 'fejl'
+b = B
