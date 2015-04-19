@@ -21,5 +21,12 @@ public class ITest {
 		
 		assertEquals("V", r.ITilV("IIII", "I"));
 	}
+	
+	@Test
+	public void testITilV2() {
+		Romertal r = new Romertal();
+		
+		assertEquals("VI", r.ITilV("IIII", "II"));
+	}
 
 }
