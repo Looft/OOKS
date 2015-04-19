@@ -8,7 +8,7 @@ import romertal.Romertal;
 
 public class ITest {
 
-	//@Test
+	@Test
 	public void test() {
 		Romertal r = new Romertal();
 		

@@ -6,7 +6,7 @@ public class Romertal {
 
 	public String calculate(String a, String b) {
 		String s = new String();
-		s = a+b;
+		s = ITilV(a,b);
 		return s;
 	}
 
