@@ -1,0 +1,27 @@
+Input                 Forventet output
+a = MCCXVII           MMCLXXVIII
+b = DCCCCLXI
+
+a = IIII              V
+b = I
+
+a = V                 X
+b = V
+
+a = XXXX              L
+b = X
+
+a = L                 C
+b = L
+
+a = CCCC              D
+b = C
+
+a = D                 M
+b = D
+
+a = 'tom'             'fejl'
+b = III
+
+a = IV                 'fejl'
+b = VX
