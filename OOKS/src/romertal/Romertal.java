@@ -29,4 +29,8 @@ public class Romertal {
 		return r.toString();
 	}
 
+	public String VTilX(String a, String b) {
+		return "X";
+	}
+
 }
