@@ -1,17 +1,26 @@
 package romertal;
 
 public class Romertal {
-	private int antalI;
-	private int antalV;
+
 
 	public String calculate(String a, String b) {
 		String s = new String();
-		s = ITilV(a,b);
+		s = cleanUp(a,b);
 		return s;
 	}
 
-	public String ITilV(String a, String b) {
+	private String cleanUp(String a, String b) {
 		String s = a+b;
+		String I = ITilV(s);
+		String V = VTilX(s);
+		
+		s = I+V;
+		return s;
+	}
+
+	public String ITilV(String s) {
+		int antalI = 0;
+		int antalV = 0;
 		for(int i = 0; i<s.length(); i++){
 			if(s.charAt(i) == 'I'){
 				antalI++;				
@@ -29,8 +38,24 @@ public class Romertal {
 		return r.toString();
 	}
 
-	public String VTilX(String a, String b) {
-		return "X";
+	public String VTilX(String s) {
+		int antalV = 0;
+		int antalX = 0;
+		for(int i = 0; i<s.length(); i++){
+			if(s.charAt(i) == 'V'){
+				antalV++;				
+			}
+		}
+		antalX += antalV/2;
+		antalV = antalV%2;
+		StringBuffer r = new StringBuffer();
+		for(int i = 0; i< antalX; i++){
+			r.append("X");
+		}
+		for(int i = 0; i< antalV; i++){
+			r.append("V");
+		}
+		return r.toString();
 	}
 
 }
