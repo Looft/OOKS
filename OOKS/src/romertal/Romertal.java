@@ -13,8 +13,9 @@ public class Romertal {
 		String s = a+b;
 		String I = ITilV(s);
 		String V = VTilX(s);
+		String X = XTilL(s);
 		
-		s = I+V;
+		s = X+V+I;
 		return s;
 	}
 
@@ -54,6 +55,26 @@ public class Romertal {
 		}
 		for(int i = 0; i< antalV; i++){
 			r.append("V");
+		}
+		return r.toString();
+	}
+
+	public String XTilL(String s) {
+		int antalX = 0;
+		int antalL = 0;
+		for(int i = 0; i<s.length(); i++){
+			if(s.charAt(i) == 'X'){
+				antalX++;				
+			}
+		}
+		antalL += antalX/5;
+		antalX = antalX%5;
+		StringBuffer r = new StringBuffer();
+		for(int i = 0; i< antalL; i++){
+			r.append("L");
+		}
+		for(int i = 0; i< antalX; i++){
+			r.append("X");
 		}
 		return r.toString();
 	}
