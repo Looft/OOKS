@@ -5,23 +5,35 @@ b = DCCCCLXI
 a = IIII              V
 b = I
 
+a = IIIII              VI
+b = I
+
 a = V                 X
+b = V
+
+a = VV                XV
 b = V
 
 a = XXXX              L
 b = X
 
+a = XXXXV            LV
+b = X
+
 a = L                 C
+b = L
+
+a = LL                CL
 b = L
 
 a = CCCC              D
 b = C
 
-a = D                 M
+a = DD                MD
 b = D
 
 a = 'tom'             'fejl'
 b = III
 
-a = IV                 'fejl'
-b = VX
+a = A                 'fejl'
+b = B
